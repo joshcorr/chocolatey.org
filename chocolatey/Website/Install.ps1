@@ -230,7 +230,7 @@ if ($unzipMethod -eq '7zip') {
       throw "Unable to unzip package using built-in compression. Set `$env:chocolateyUseWindowsCompression = 'false' and call install again to use 7zip to unzip. Error: `n $_"
     }
   } else {
-    Expand-Archive -Path "$file" -DestinationPath "$tempDir" -Force
+    Microsoft.PowerShell.Archive\Expand-Archive -Path "$file" -DestinationPath "$tempDir" -Force
   }
 }
 
